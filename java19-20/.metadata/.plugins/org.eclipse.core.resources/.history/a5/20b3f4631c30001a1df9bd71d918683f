@@ -1,0 +1,20 @@
+
+public class DiscManager {
+	Disc getSmallDisc() {
+		System.out.println("returns small disc.");
+		Disc small=new Disc(5);
+		return small;
+	}
+	
+	Disc getMediumDisc() {
+		System.out.println("returns medium disc.");
+		Disc medium = new Disc(9);
+		return medium;
+	}
+	
+	Disc getLargeDisc() {
+		System.out.println("returns large disc.");
+		Disc large = new Disc(13);
+		return large;
+	}
+}

@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+
+public class Tower {
+	ArrayList<Disc> discs = new ArrayList<Disc>();
+	private String letter;
+
+	Tower(String letter) {
+		this.letter = letter;
+	}
+
+	void draw() {
+		drawTower();
+		for (int x = 0; x < discs.size(); x++) {
+			Disc d = discs.get(x);
+			d.draw();
+		}
+		System.out.println(letter);
+	}
+
+	void addDisc(Disc d) {
+		// System.out.println("adding disc");
+		this.discs.add(d);
+	}
+	
+	void drawTower() {
+		for(int x=0; x<4; x++) {
+			System.out.println("    |");
+		}
+	}
+}

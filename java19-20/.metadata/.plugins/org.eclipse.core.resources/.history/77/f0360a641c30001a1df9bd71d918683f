@@ -1,0 +1,29 @@
+
+public class Gamer {
+	Tower t1;
+	Tower t2;
+	Tower t3;
+	void create() {
+		System.out.println("Making game!");
+		DiscManager dm = new DiscManager();
+		Disc small = dm.getSmallDisc();
+		Disc medium = dm.getMediumDisc();
+		Disc large = dm.getLargeDisc();
+
+		this.t1 = new Tower("T.1");
+		t1.addDisc(small);
+		t1.addDisc(medium);
+		t1.addDisc(large);
+		t1.draw();
+		
+		this.t2 = new Tower("T.2");
+		this.t3 = new Tower("T.3");
+		t2.draw();
+		t3.draw();
+
+	}
+
+	void move(int from, int to) {
+		System.out.println("Moving " + from + " to " + to);
+	}
+}
